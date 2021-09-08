@@ -1,9 +1,6 @@
 name: Publish container
-on:
-  pull_request:
-    paths:
-      - '**.js'
-      - '**.ts'
+on: [ push ]
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
