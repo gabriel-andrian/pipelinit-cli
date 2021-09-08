@@ -6,9 +6,9 @@ import { PIPELINIT_VERSION } from "./deps.ts";
 
 const TARGETS = [
   "x86_64-unknown-linux-gnu",
-  "x86_64-pc-windows-msvc",
-  "x86_64-apple-darwin",
-  "aarch64-apple-darwin",
+  //  "x86_64-pc-windows-msvc",
+  //  "x86_64-apple-darwin",
+  //  "aarch64-apple-darwin",
 ];
 
 // Bundle and minify
@@ -90,9 +90,9 @@ const compress = async function (target: string) {
 };
 
 await compile();
-for (const target of TARGETS) {
-  await compile(target);
-  await compress(target);
-}
+//for (const target of TARGETS) {
+// await compile(target);
+//  await compress(target);
+//}
 
 await Deno.remove(conf.output);
